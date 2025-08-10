@@ -15,7 +15,14 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = [
+    "dspy-ai>=2.4.0",
+    "tweepy>=4.14.0",
+    "aiohttp>=3.9.0",
+    "click>=8.1.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.5.0",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -46,3 +53,6 @@ python_version = "3.12"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
+
+[project.scripts]
+tweet-agent = "twitter_agent.cli:main"
